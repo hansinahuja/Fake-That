@@ -8,5 +8,10 @@ Part of my Technology Museum course project, this is a website interface to gath
 Some snapshots:
 
 <p align="center">
-  <img src="img/landing-page.png", width="50%"> <img src="img/homepage.png", width="50%">   
+  <img src="img/landing-page.png", width="90%">  
 </p>
+
+<p align="center">
+ <img src="img/homepage.png", width="90%">  
+</p>
+ 
