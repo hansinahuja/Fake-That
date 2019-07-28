@@ -12,7 +12,7 @@ Some snapshots:
 </p>
 
 <p align="center">
- <kbd><img src="img/homepage.png", width="90%"></kbd>
+ <img src="img/homepage.png", width="90%", border="10">
 </p>
  
 <p align="center">
