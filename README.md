@@ -8,6 +8,11 @@ Part of my Technology Museum course project, this is a website interface to gath
 Some snapshots:
 
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Landing page](img/landing-page.png)  |  ![Homepage](img/homepage.png)
+
+
 <p align="center">
   <img src="img/landing-page.png", width="90%">  
 </p>
