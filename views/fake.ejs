@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Fake <%= channel.name %></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<!-- table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+} -->
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-third img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-third img:hover{opacity:1}
+th, td {
+  padding: 5px;
+  text-align: center;
+};
+</style>
+<body class="w3-animate-top">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h1 class="w3-padding-64"><b><%= channel.name %></b></h1>
+  </div>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><%= channel.description %></h3>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Fake <%= channel.name %></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Home and Purpose -->
+  <div class="w3-container" style="margin-top:80px" id="home">
+    <h1 class="w3-jumbo"><b>Fake <%= channel.name %></b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Real analysis.</b></h1>
+    <br>
+    <!-- <hr style="width:50px;border:5px solid red" class="w3-round"> -->
+    <table style = "width:100%">
+      <tr>
+        <td><h1 class="w3-xxxlarge w3-text-black"><b>FT Meter</b></h1></td>
+        <td><h1 class="w3-xxxlarge w3-text-black"><b>Trust & Reliability</b></h1></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><hr style="width:100%;border:5px solid red" class="w3-round"></td>
+      </tr>
+
+      <tr>
+        <td><h1 class="w3-jumbo w3-text-red"><b><%= channel.bias %></b></h1></td>
+        <td><h1 class="w3-jumbo w3-text-red"><b><%= channel.trust %>%</b></h1></td>
+      </tr>
+    </table>
+    <br>
+
+    <p><b>What does this mean?</b></p>
+    <p>This is the number we get after we perform statistical operations on our crowd responses. This project is still in a testing phase, and not enough data to analyse the distribution of the data we have. However, we apply the most basic operations, which are still fairly accurate. L=left-leaning, R=right-leaning.</p>
+
+    <p><b>How do we calculate the trust & reliability?</b></p>
+    <p>Just another way of representing our FT Meter.</p>
+
+  </div>
+
+  <!-- Features -->
+  <div class="w3-container" id="features" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Some friends & foes.</b></h1>
+    <table width="100%"" border="0">
+      <tr>
+        <td><h1 class="w3-xxxlarge w3-text-black"><b>Alliances</b></h1></td>
+        <td><h1 class="w3-xxxlarge w3-text-black"><b>Rivalries</b></h1></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><hr style="width:100%;border:5px solid red" class="w3-round"></td>
+      </tr>
+
+      <% if(channel.name == 'NDTV' || channel.name == 'Aaj Tak'){ %>
+        <tr>
+          <td><h3><b>INC</b></h3></td>
+          <td><h3><b>BJP</b></h3></td>
+        </tr>
+
+        <tr>
+          <td><h3><b>Pro-left</b></h3></td>
+          <td><h3><b>Hindu</b></h3></td>
+        </tr>
+      <% } %>
+
+      <% if(channel.name == 'Zee News'){ %>
+        <tr>
+          <td><h3><b>BJP</b></h3></td>
+          <td><h3><b>INC</b></h3></td>
+        </tr>
+
+        <tr>
+          <td><h3><b>RPI</b></h3></td>
+          <td><h3><b></b></h3></td>
+        </tr>
+
+        <td><h3><b>RSS</b></h3></td>
+        <td><h3><b></b></h3></td>
+      <% } %>
+
+
+    </table>
+    <br>
+    <p><b>How do we determine this information?</b></p>
+    <p>This is the part of our website that is curated. If enough people believe that a news channel is biased towards or against a particular organization, we add it to the list. Expert opinions, international sentiment, etc. count towards our decision to add a particular entry to the list as well.</p>
+
+  </div>
+
+
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Send us your responses.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Send us your responses and we'll add your opinions to our crowd-sourced database.</p>
+    <form action="" target="_blank">
+      <div class="w3-section">
+        <label>Alliances</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Rivals</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>FT Meter contribution and other thoughts.</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Fake That</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-third img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-third img:hover{opacity:1}
+</style>
+<body class="w3-animate-top">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Fake<br>That</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Purpose</a>
+    <a href="#features" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Features</a>
+    <a href="#database" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Current Database</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Team</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Fake That</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Home and Purpose -->
+  <div class="w3-container" style="margin-top:80px" id="home">
+    <h1 class="w3-jumbo"><b>Check it out.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Purpose.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><img src="images/spam.jpg" style="float:left; margin-right:15px"> According to a survey done by Cisco Systems in 2011, India is home to the maximum volume of spam in the world.<br><br>That's 6 spots over Brazil, a country in which the menace of fake news helped elect a dictatorial presidential candidate.<br><br>With it being a sensitive time because of the upcoming elections, we thought of building a tool to help people decide the validity of the news they're consuming through a crowd-sourced approach.</p>
+  </div>
+
+  <!-- Features -->
+  <div class="w3-container" id="features" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Features.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><b>Crowdsourcing</b> is a sourcing model in which individuals or organizations obtain goods and services, including ideas and finances, from a large, relatively open and often rapidly-evolving group of internet users; it divides work between participants to achieve a cumulative result.<br><br>It works on the principle that <b>wisdom of the masses is greater than the wisdome of an individual.</b> This is primarily the concept behind the success of a website like Wikipedia. Surveys show that Wikipedia is often times not only as reliable as, but more reliable than something like the Britannica Encylopaedia.<br><br>We employ a model of software crowdsourcing, and perform various statistical operations to give you an accurate result.</p>
+
+  </div>
+
+  <!-- Current database -->
+  <div class="w3-container" id="database" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Current Database.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Database intro</p>
+    <div class="w3-row-padding">
+    <% all.forEach(function(channel){ %>
+
+      <div class="w3-third">
+        <a href = "/fake/<%= channel.name %>">
+        <img src="<%= channel.image %>" height="300" width="350" onclick="onClick(this)" alt="<%= channel.name %>">
+      </a>
+      </div>
+   <% }); %>
+    <!-- <div class="w3-row-padding">
+      <div class="w3-third">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/03/b5/9e/03b59e84-cef0-aa35-c185-62014347cf9d/source/256x256bb.jpg" style="width:100%" onclick="onClick(this)" alt="NDTV">
+      </div> -->
+
+      <!-- <div class="w3-third">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/03/b5/9e/03b59e84-cef0-aa35-c185-62014347cf9d/source/256x256bb.jpg" style="width:100%" onclick="onClick(this)" alt="NDTV">
+      </div>
+
+      <div class="w3-third">
+        <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/03/b5/9e/03b59e84-cef0-aa35-c185-62014347cf9d/source/256x256bb.jpg" style="width:100%" onclick="onClick(this)" alt="NDTV">
+      </div> -->
+
+
+    </div>
+  </div>
+
+  <!-- Team -->
+  <div class="w3-container" id="team" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><b>The best team in the world.</b></p>
+
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i64.tinypic.com/2h58qjp.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Nikhil</h3>
+          <p class="w3-opacity">2018csb1108</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i68.tinypic.com/10ct450.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Srikar</h3>
+          <p class="w3-opacity">2018csb1098</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i65.tinypic.com/o70i03.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Hansin</h3>
+          <p class="w3-opacity">2018csb1094</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i63.tinypic.com/1expa1.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Nikita</h3>
+          <p class="w3-opacity">2018csb1110</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i64.tinypic.com/9tfpqh.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Ashish</h3>
+          <p class="w3-opacity">2018csb1099</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i68.tinypic.com/n39c1g.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Naveen</h3>
+          <p class="w3-opacity">2018csb1106</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m3 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="http://i66.tinypic.com/wb2phk.jpg" style="width:100%;height:250px">
+        <div class="w3-container">
+          <h3>Sanjay</h3>
+          <p class="w3-opacity">2018csb1091</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Got any suggestions for us? Contact us!</p>
+    <form action="" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right"></p></div>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
