@@ -7,18 +7,12 @@ Part of my Technology Museum course project, this is a website interface to gath
 
 Some snapshots:
 
-
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![Landing page](img/landing-page.png)  |  ![Homepage](img/homepage.png)
-
-
 <p align="center">
   <img src="img/landing-page.png", width="90%">  
 </p>
 
 <p align="center">
- <img src="img/homepage.png", width="90%">  
+ <img src="img/homepage.png", width="90%", border="10px">  
 </p>
  
 <p align="center">
