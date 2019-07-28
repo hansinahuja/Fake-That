@@ -8,25 +8,25 @@ Part of my Technology Museum course project, this is a website interface to gath
 Some snapshots:
 
 <p align="center">
-  <img src="img/landing-page.png", width="90%">  
+  <kbd><img src="img/landing-page.png", width="90%"></kbd>
 </p>
 
 <p align="center">
- <img src="img/homepage.png", width="90%", border="100">
+ <kbd><img src="img/homepage.png", width="90%"></kbd>
 </p>
  
 <p align="center">
- <img src="img/homepage2.png", width="90%">  
+ <kbd><img src="img/homepage2.png", width="90%"></kbd> 
 </p>
 
 <p align="center">
- <img src="img/homepage3.png", width="90%">  
+ <kbd><img src="img/homepage3.png", width="90%"></kbd>  
 </p>
 
 <p align="center">
- <img src="img/newspage.png", width="90%">  
+ <kbd><img src="img/newspage.png", width="90%"></kbd>  
 </p>
 
 <p align="center">
- <img src="img/newspage2.png", width="90%">  
+ <kbd><img src="img/newspage2.png", width="90%"></kbd>  
 </p>
